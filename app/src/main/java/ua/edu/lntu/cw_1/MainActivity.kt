@@ -72,7 +72,7 @@ Text(text = "Rick Astley",
             Image(
                 painter = painterResource(id = R.drawable.email),
                 contentDescription = "Photo of author",
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
                 text = "rickastley228@gmail.com",
@@ -86,7 +86,7 @@ Text(text = "Rick Astley",
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
                 contentDescription = "Photo of author",
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
                 text = "+380111111",
@@ -100,7 +100,7 @@ Text(text = "Rick Astley",
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
                 contentDescription = "Photo of author",
-                modifier = Modifier.size(20.dp)
+                modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
                 text = "+325232134",
