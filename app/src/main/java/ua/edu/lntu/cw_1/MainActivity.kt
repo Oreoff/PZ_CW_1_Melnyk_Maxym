@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -19,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
-
+import androidx.compose.foundation.verticalScroll
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
             CW_1Theme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
                     color = Color(android.graphics.Color.parseColor("#EDEFE3"))
                 ) {
                     Greeting()
@@ -64,7 +65,7 @@ Text(text = "Rick Astley",
         horizontalAlignment = Alignment.CenterHorizontally
     )
     {
-        Row (modifier = modifier,
+        Row (modifier = modifier.padding(bottom = 10.dp),
             verticalAlignment = Alignment.Bottom,
             horizontalArrangement = Arrangement.Center
         ){
@@ -74,6 +75,30 @@ Text(text = "Rick Astley",
                 , modifier = Modifier.size(20.dp),
             )
             Text(text = "rickastley228@gmail.com"
+                , fontSize = 16.sp)
+        }
+        Row (modifier = modifier.padding(bottom = 10.dp),
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.Center
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.phone_font_awesome_svg),
+                contentDescription = "Photo of author"
+                , modifier = Modifier.size(20.dp),
+            )
+            Text(text = "+380111111"
+                , fontSize = 16.sp)
+        }
+        Row (modifier = modifier,
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.Center
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.phone_font_awesome_svg),
+                contentDescription = "Photo of author"
+                , modifier = Modifier.size(20.dp),
+            )
+            Text(text = "+325232134"
                 , fontSize = 16.sp)
         }
     }
