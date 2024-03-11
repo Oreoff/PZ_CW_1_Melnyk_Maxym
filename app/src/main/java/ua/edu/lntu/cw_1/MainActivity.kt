@@ -1,4 +1,5 @@
 package ua.edu.lntu.cw_1
+
 import androidx.compose.foundation.layout.*
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ua.edu.lntu.cw_1.ui.theme.CW_1Theme
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
 
@@ -26,7 +28,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = Color(android.graphics.Color.parseColor("#EDEFE3"))
                 ) {
                     Greeting()
                 }
@@ -37,11 +39,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting( modifier: Modifier = Modifier.fillMaxSize()) {
-Column(modifier = Modifier.padding(13.dp),
+    val backgroundColor = Color(android.graphics.Color.parseColor("#DBEA8D"))
+Column(modifier = Modifier,
     horizontalAlignment = Alignment.CenterHorizontally
 )
     {
-Column(modifier = modifier.padding(13.dp),
+Column(modifier = modifier,
     verticalArrangement = Arrangement.Center,
     horizontalAlignment = Alignment.CenterHorizontally)
 {
@@ -52,10 +55,12 @@ Column(modifier = modifier.padding(13.dp),
         )
 Text(text = "Rick Astley",
     fontSize = 36.sp)
-
+    Text(text = "Famous British pop-singer",
+        fontSize = 20.sp)
 }
     }
-}
+    }
+
 
 @Preview(showBackground = true)
 @Composable
