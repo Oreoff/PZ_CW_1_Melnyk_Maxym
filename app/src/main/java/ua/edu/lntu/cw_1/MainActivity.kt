@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting( modifier: Modifier = Modifier.fillMaxSize()) {
-Column(modifier = Modifier,
+Column(modifier = Modifier.fillMaxSize(),
     horizontalAlignment = Alignment.CenterHorizontally
 )
     {
@@ -57,22 +57,24 @@ Text(text = "Rick Astley",
     Text(text = "Famous British pop-singer",
         fontSize = 20.sp)
 }
-        Column(modifier = modifier,
-            verticalArrangement = Arrangement.Bottom ,
-            horizontalAlignment = Alignment.CenterHorizontally
-        )
-        {
-            Row (modifier = modifier,
-                horizontalArrangement = Arrangement.Center
-            ){
-                Image(
-                    painter = painterResource(id = R.drawable.email),
-                    contentDescription = "Photo of author"
-                    , modifier = Modifier.size(20.dp),
-                )
-                Text(text = "rickastley228@gmail.com"
-                    , fontSize = 16.sp)
-            }
+
+    }
+    Column(modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom ,
+        horizontalAlignment = Alignment.CenterHorizontally
+    )
+    {
+        Row (modifier = modifier,
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.Center
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.email),
+                contentDescription = "Photo of author"
+                , modifier = Modifier.size(20.dp),
+            )
+            Text(text = "rickastley228@gmail.com"
+                , fontSize = 16.sp)
         }
     }
     }
