@@ -71,7 +71,7 @@ Text(text = "Rick Astley",
         ) {
             Image(
                 painter = painterResource(id = R.drawable.email),
-                contentDescription = "Photo of author",
+                contentDescription = "Email",
                 modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
@@ -85,7 +85,7 @@ Text(text = "Rick Astley",
         ) {
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
-                contentDescription = "Photo of author",
+                contentDescription = "Phone",
                 modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
@@ -99,7 +99,7 @@ Text(text = "Rick Astley",
         ) {
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
-                contentDescription = "Photo of author",
+                contentDescription = "Phone",
                 modifier = Modifier.size(20.dp).padding(end = 5.dp)
             )
             Text(
