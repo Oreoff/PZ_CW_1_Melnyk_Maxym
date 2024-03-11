@@ -60,46 +60,52 @@ Text(text = "Rick Astley",
 }
 
     }
-    Column(modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Bottom ,
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
-    )
-    {
-        Row (modifier = modifier.padding(bottom = 10.dp),
-            verticalAlignment = Alignment.Bottom,
+    ) {
+        Row(
+            modifier = Modifier.padding(bottom = 10.dp),
             horizontalArrangement = Arrangement.Center
-        ){
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.email),
-                contentDescription = "Photo of author"
-                , modifier = Modifier.size(20.dp),
+                contentDescription = "Photo of author",
+                modifier = Modifier.size(20.dp)
             )
-            Text(text = "rickastley228@gmail.com"
-                , fontSize = 16.sp)
+            Text(
+                text = "rickastley228@gmail.com",
+                fontSize = 16.sp
+            )
         }
-        Row (modifier = modifier.padding(bottom = 10.dp),
-            verticalAlignment = Alignment.Bottom,
+        Row(
+            modifier = Modifier.padding(bottom = 10.dp),
             horizontalArrangement = Arrangement.Center
-        ){
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
-                contentDescription = "Photo of author"
-                , modifier = Modifier.size(20.dp),
+                contentDescription = "Photo of author",
+                modifier = Modifier.size(20.dp)
             )
-            Text(text = "+380111111"
-                , fontSize = 16.sp)
+            Text(
+                text = "+380111111",
+                fontSize = 16.sp
+            )
         }
-        Row (modifier = modifier,
-            verticalAlignment = Alignment.Bottom,
+        Row(
+            modifier = Modifier,
             horizontalArrangement = Arrangement.Center
-        ){
+        ) {
             Image(
                 painter = painterResource(id = R.drawable.phone_font_awesome_svg),
-                contentDescription = "Photo of author"
-                , modifier = Modifier.size(20.dp),
+                contentDescription = "Photo of author",
+                modifier = Modifier.size(20.dp)
             )
-            Text(text = "+325232134"
-                , fontSize = 16.sp)
+            Text(
+                text = "+325232134",
+                fontSize = 16.sp
+            )
         }
     }
     }
