@@ -16,6 +16,8 @@ import androidx.compose.ui.unit.dp
 import ua.edu.lntu.cw_1.ui.theme.CW_1Theme
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.sp
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,16 +36,23 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting( modifier: Modifier = Modifier) {
-Column(modifier = Modifier.padding(13.dp).fillMaxSize(),
+fun Greeting( modifier: Modifier = Modifier.fillMaxSize()) {
+Column(modifier = Modifier.padding(13.dp),
     horizontalAlignment = Alignment.CenterHorizontally
 )
     {
 Column(modifier = modifier.padding(13.dp),
-    verticalArrangement = Arrangement.Center)
+    verticalArrangement = Arrangement.Center,
+    horizontalAlignment = Alignment.CenterHorizontally)
 {
     Image(painter = painterResource(id = R.drawable.bg_f8f8f8_flat_750x_075_f_pad_750x1000_f8f8f8),
-        contentDescription = "Photo of author")
+        contentDescription = "Photo of author"
+    , modifier = Modifier
+            .size(150.dp),
+        )
+Text(text = "Rick Astley",
+    fontSize = 36.sp)
+
 }
     }
 }
